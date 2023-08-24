@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debt Inquiry</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('https://images.unsplash.com/photo-1613243555978-636c48dc653c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80') no-repeat center center fixed;
+    background-size: cover;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .container {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .question {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .button {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, text-decoration 0.3s ease;
+    text-decoration: none; /* Remove underline */
+  }
+  .button:hover {
+    background-color: #2980b9;
+  }
+</style>
+</head>
+<body>
+<div class="overlay"></div>
+<div class="container">
+  <div class="question">Do you have debt?</div>
+  <div class="buttons">
+    <button class="button" onclick="showCreditCardQuestion('yes')">Yes</button>
+    <a class="button" href="https://www.maxbounty.com">No</a>
+  </div>
+</div>
+
+<script>
+  function showCreditCardQuestion(answer) {
+    const container = document.querySelector('.container');
+    container.innerHTML = `
+      <div class="question">Is it credit card debt?</div>
+      <div class="buttons">
+        <button class="button" onclick="showDebtAmountQuestion('yes')">Yes</button>
+        <a class="button" href="https://www.maxbounty.com">No</a>
+      </div>
+    `;
+  }
+
+  function showDebtAmountQuestion(answer) {
+    const container = document.querySelector('.container');
+    container.innerHTML = `
+      <div class="question">Is it more than $15k?</div>
+      <div class="buttons">
+        <a class="button" href="https://www.maxbounty.com">Yes</a>
+        <a class="button" href="https://www.maxbounty.com">No</a>
+      </div>
+    `;
+  }
+</script>
+</body>
+</html>
