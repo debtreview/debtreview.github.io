@@ -20,11 +20,11 @@ function ipv6InRange(ip, cidr) {
 }
 
 function isIPv4(ip) {
-    return ip.includes('.');
+    return ip.includes('.') && ip.split('.').length === 4;
 }
 
 function isIPv6(ip) {
-    return ip.includes(':');
+    return ip.includes(':') && ip.split(':').length > 1;
 }
 
 async function loadIPList() {
@@ -44,15 +44,16 @@ function ipExactMatch(ip, range) {
 (async function() {
     try {
         const excludedIPs = await loadIPList();
-        const { ip } = await (await fetch('https://api64.ipify.org?format=json')).json();
+        const { ip } = await (await fetch('https://api.ipify.org?format=json')).json(); // Change to api.ipify.org for IPv4 and IPv6
         let isExcluded = false;
 
         excludedIPs.forEach(range => {
             range = range.trim();
+
             if (range.includes('/')) {
-                if (isIPv6(range)) {
+                if (isIPv6(range) && isIPv6(ip)) {
                     if (ipv6InRange(ip, range)) isExcluded = true;
-                } else if (isIPv4(range)) {
+                } else if (isIPv4(range) && isIPv4(ip)) {
                     if (ipv4InRange(ip, range)) isExcluded = true;
                 }
             } else {
