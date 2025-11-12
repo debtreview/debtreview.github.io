@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 256 256">
+  <defs>
+    <style>
+      .bg{fill:"none";}
+      .stroke{fill:none;stroke:#ffffff;stroke-width:8;stroke-linecap:round;stroke-linejoin:round;}
+      .white{fill:#ffffff;}
+      .accent{fill:#E53935;}
+      text{font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji'; font-weight:800;}
+    </style>
+  </defs>
+  <!-- Badge circle -->
+  <circle cx="128" cy="86" r="44" class="stroke"/>
+  <!-- Megaphone -->
+  <path d="M96 86 h-10 a8 8 0 0 0 0 16 h10" class="stroke"/>
+  <path d="M102 70 v32 l42 -12 v-8 l-42 -12 z" class="stroke"/>
+  <circle cx="148" cy="86" r="4" class="white"/>
+  
+  <!-- Ribbon -->
+  <g transform="translate(16,140)">
+    <rect x="0" y="0" width="224" height="34" rx="6" class="accent"/>
+    <polygon points="22,34 10,60 36,48" class="accent"/>
+    <polygon points="202,34 214,60 188,48" class="accent"/>
+    <text x="112" y="23" font-size="18" text-anchor="middle" fill="#ffffff">MarketFix</text>
+  </g>
+</svg>
