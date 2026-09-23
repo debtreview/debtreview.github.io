@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+    const links = [
+      "aHR0cHM6Ly93d3cucmVkZGl0LmNvbS9yL0dMUDFQcm92aWRlcnMvY29tbWVudHMvMXdvY2RlbC93aWxsb3dfb3JhbF9zZW1hZ2x1dGlkZV93ZWlnaHRfbG9zc19wcm9ncmVzcy8=",
+      "aHR0cHM6Ly93d3cucmVkZGl0LmNvbS9yL0dMUDFQcm92aWRlcnMvY29tbWVudHMvMXdvOTd6YS9teV9leHBlcmllbmNlX3dpdGhfd2lsbG93X2dscDEv",
+      "aHR0cHM6Ly93d3cucmVkZGl0LmNvbS9yL0dMUDFQcm92aWRlcnMvY29tbWVudHMvMXdubGk5Zy93aWxsb3dfZ2xwMV9pc3N1ZXNfd2FzX2l0X3dvcnRoX2l0Lw==",
+      "aHR0cHM6Ly93d3cucmVkZGl0LmNvbS9yL0dMUDFQcm92aWRlcnMvY29tbWVudHMvMXdua3N0by9teV9ob25lc3Rfd2lsbG93X2dscDFfZXhwZXJpZW5jZV9hZnRlcl84X3dlZWtzLw==",
+      "aHR0cHM6Ly93d3cucmVkZGl0LmNvbS9yL0dMUDFQcm92aWRlcnMvY29tbWVudHMvMXdnd2N6ZC9nbHAxX29yYWxfcGlsbHNfdnNfaW5qZWN0YWJsZXNfd2lsbG93Lw==",
+      "aHR0cHM6Ly93d3cucmVkZGl0LmNvbS9yL0dMUDFQcm92aWRlcnMvY29tbWVudHMvMXZ5czJidS9jYW50X2RlY2lkZV9iZXR3ZWVuX3dpbGxvd19hbmRfZm91bmRfcmFudC8="
+    ];
+    const destination = atob(
+      links[Math.floor(Math.random() * links.length)]
+    );
+    window.location.replace(destination);
+  </script>
+</head>
+</html>
